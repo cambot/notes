@@ -56,3 +56,106 @@ I can see how it can be slow to transition to TDD, but I don't need convincing o
 - Partitioning:
   - Application objects, Interactor objects
 - Database
+
+## Episode 8 - S.O.L.I.D. Overview
+
+### 11:14: The source code is the Design
+- The cost of building is the cost of compiling.
+- The cost structure is inverted compared to physical anologs. (Houses, circuits, etc…)
+- It’s easy to evolve a system into something that works well, or a burning mess
+
+### 20:00: Bad Design Smells
+- Regidity
+  - Long build & test times = rigid systems
+  - Sign of coupling
+- Fagility
+  - Long distance dependencies
+- Immobility
+  - Components cannot be easily extracted and reused.
+- Viscosity - Necessary operations are difficult to perform and take a long time to execute.
+  - Irresponsible tolerance to bad decisions
+- Needless Complexity
+  - Anticipating 
+
+### 30:30 Code Rot
+
+### 37:00 What is OO
+- Dependency inversion - Dependency opposes flow of control
+- dynamic polymorphism
+- Essential quality: ability to invert key relationships, isolate high level policies from low level design
+- Interfaces
+
+### 46:45: Dependency Management
+- Single responsibility principle
+- Open close principle
+- Liskov Substitution
+- Interface Segregation
+- Dependency inversion
+
+### 48:45: Conclusion
+
+## Episode 9 - Single Responsibility Principle
+* 1:00 - overview
+* 3:50 - Science lesson (General Relativity)
+
+### 10:00 - Responsibility
+- "The best modules are those that have just 1 responsibility."
+- Who is the audience for a method?  Which users will request changes to the responsibility?
+- what are the responsibilities to the different groups of users you serve?
+- Separate users/actors.
+- Responsibility is a family of functions that serve a single actor.
+
+### 16:20 - The Two Values of Software
+- Primary: the software is easy to change.
+- Secondary: behavior meets users needs.
+
+Friction
+- minimize responsibilities in a class
+- co-location is coupling
+- couplings tend to accumulate over time, which leads to fragility
+
+### 27:50 - SRP
+when responsibilities are kept separate, your plug becomes more plug-able.
+causes:
+- pull code into separate source files
+- extract methods
+- merge single functions into classes, classes into modules
+
+### 41:15 - Solutions
+- Invert Dependencies
+- Extract Classes
+- Facade pattern
+- Interface Segregation
+- "Perfect solutions are for fiction writers and mathimitions."
+
+### 48:00 - Case Study
+- "Unit tests tend to keep the same things separate that actors keep separate."
+- TDD got me about 80% of the way there.
+- "The best time to draw pretty diagrams is when you are done."
+
+### 1:00:00 - Conclusion
+
+## Episode 10 - The Open Close Principle
+* 0:50 - Overview
+* 4:15 - The Quantum Discontinuity
+
+### 11:42 - Open and Closed
+- A software module should be open for extension, but closed for modification"
+- Something like passing in an object that conforms to an interface or a base class?
+
+### 20:45 - A Smelly Design
+- Smell: immobility
+
+### 35:30 - De-oderizing the Design
+- www.github.com/unclebob/Episode-10-ExpenseReport
+
+### 42:45 - The Lie
+
+### 46:50 - Two Solutions
+- Big Design Up Front (Large, top-heavy, and anticipatory abstractions)
+- Agile Design (Pragmatic & reactive)
+
+### 56:15 - Reprise
+
+### 57:25 - Conclusion
+- "The Open Close Principle is at the moral center of system architecture.  To the extent that a system is not open for extension and closed for modification, that system is immoral."
