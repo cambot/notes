@@ -159,3 +159,56 @@ causes:
 
 ### 57:25 - Conclusion
 - "The Open Close Principle is at the moral center of system architecture.  To the extent that a system is not open for extension and closed for modification, that system is immoral."
+
+## Episode 11 - Liskov Substitution Principle  (part 1) 
+- 1:00 - Recap of Ep 10
+- 5:00 - Wave Particle Duality
+
+### 13:18 - Type theory
+- What’s in a type - a bag of operations.
+
+### 21:55 - Subtypes
+- asymmetry of usability
+- "Subtypes can be used as their parent types"
+
+### 34:30 - The representative rule
+- Square/Rectangle
+- Every refused bequest is a violation of the open-closed principle.
+- Solution: keep Squares and Rectangles as separate types.
+- Representative do not share the relationships of the things they represent.
+	
+## Episode 11 - Liskov Substitution Principle  (part 2) 
+
+### 0:15 - Heuristics
+- If the base class does something, the derived class must do it too and in the same expected way.
+- The derived function unconditionally throws an exception
+- isInstanceOf (unless it’s to re-assert information the compiler has lost)
+- Type Cases
+- Inheritance breeds rigidity, you drag along all the dependencies along with the base class
+
+### 10:20 - Design by Contract
+
+###13:45 - The Modem Problem
+- Solution: adaptor class pattern. All Dependencies point away from the ugly hack.
+
+### 27:25 - Conclusion
+
+## Episode 12 - Interface Segregation Principle
+- 3:20 - Overview
+- 6:55 - Heisenberg Uncertainty Principle
+
+### 14:30 - Interfaces
+- Name has more to do with its user than its implementers.
+
+### 24:40 - Fat Classes
+- Classes that have lots and lots of methods.  Lots of fan out.  Issues: longer build/compile time.  strongly coupled dependencies.
+- Solution: implement multiple interfaces.
+- 36:30 - The ATM Example
+
+### 45:00 - Physical Structure
+- Don’t depend on things you don’t need.
+
+### 54:05 - The Need to Know
+- "Loose Lips sink ships, and leaky abstractions create distractions."
+
+### 58:20 - Conclusion
