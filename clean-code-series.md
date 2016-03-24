@@ -201,7 +201,8 @@ causes:
 - Name has more to do with its user than its implementers.
 
 ### 24:40 - Fat Classes
-- Classes that have lots and lots of methods.  Lots of fan out.  Issues: longer build/compile time.  strongly coupled dependencies.
+- Classes that have lots and lots of methods.  Lots of fan out.
+- Issues: longer build/compile time.  strongly coupled dependencies.
 - Solution: implement multiple interfaces.
 - 36:30 - The ATM Example
 
