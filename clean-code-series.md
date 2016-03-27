@@ -213,3 +213,100 @@ causes:
 - "Loose Lips sink ships, and leaky abstractions create distractions."
 
 ### 58:20 - Conclusion
+
+## Episode 13 - The Dependency Inversion Principle
+- 3:10 - Overview
+- 5:55 - Einstein’s Dilemma
+- 13:35 - Dependency Inversion Begins
+
+### 22:00 - What are dependencies?
+- Run time vs.  compile time.
+
+### 28:25 - Dependency Inversion
+- polymorphism 
+- divide the system by boundaries, then point dependeces away from those boundaries. 
+- modules that contain high level details like business policies should not depend on low level modules that generate html output or report formatting.
+
+### 38:30 - The Inversion
+- 41:00 - Dependence Inversion Examples
+- 47:40 - Conclusion
+
+## Episode 14 - Solid Summary (Payroll system case study)
+
+### 2:30 - Requirements and Use Cases
+
+### 10:20 - The Single Responsibility Principle
+
+### 13:45 - Diagrams and YAGNI
+- YAGNI: You aren’t going to need it.
+- Code diagrams usually are rife with rot.
+	- All the more reason to automate that?
+
+### 17:30 - The Open-Closed Principle
+•	“Notice how conformance to the open-close principle improves conformance to the single responsibility principle”
+
+### 22:05 - The Liskov Substitution Principle
+- Special case: null object case
+
+### 28:05 - The Interface Segregation Principle	
+- Dynamic factory
+
+### 31:35 - The Dependency Inversion Principle
+- Remember: “High level policies should be isolated from low level details”
+
+### 33:35 - Conclusion
+
+### Group Discussion:
+- "Start listening for what the client is saying as it will give you clues about what the architecture needs to look like."
+- … We all need access to the raw data of the client’s request, because we all form our own filters and views of the client’s request.  Chaining understanding Client > PM/UX > Dev reduces understanding of the problem.
+
+## Episode 15 - Solid Components
+- 2:10 - Overview
+- 3:45 - White Dwarf Stars
+
+### 9:10 - What is a Component?
+- an independently deployable library/module/jar file/gem/etc…
+
+### 21:10 - Coffee Maker Requirements
+
+### 27:10 - The Architect’s solution
+
+### 34:40 - A Real Design
+
+### (45:40 - Implementation)
+
+### 50:55 - Components
+
+### 53:35 - Conclusion
+- The code that implements low level details depend on the high level policies, not the other way around.
+
+### Episode 16 - Component Cohesion
+- 1:50 - Overview
+- 4:15 - Type 1A Supernovae
+
+### 9:50 - Cohesion
+- Functions are the basic element
+- Classes are the first level of cohesion.
+- Common errors:
+	- Bundling entire inheritance hierarchies together.
+	- Things that use the base class are often bundled together with the base class.  Sub classes should not be bundled with the parent classes.
+- Goal: Independent Deployability
+
+### 14:45 - The Release-Reuse Equivalence Principle
+- The granule of reuse is the same as a granule of release
+- A component needs to be large enough to justify the overhead of managing the release cycle.
+
+### 24:10 - The Common Closure Principle
+- Classes that would be changed for the same reasons should be grouped together
+- That means that these classes should all serve the same actor.
+- They are closed to the needs of every other actor.
+- Systems are composed of layers that separate business rules from low level details.  Those layers are partitioned into components.  Each component are composed of classes that serve a single actor
+
+### 31:30 - The Common Reuse Principle
+- Group together classes that are used together.
+
+### 41:15 - The Tension Diagram
+- These 3 principles work in tension, pulling a system’s design in a different directions.
+- Position within the triangle depends on how mature your product is.  Early: common closure & common resuse principle.  Moves towards Release-Reuse principle.
+
+### 46:10 - Conclusion
