@@ -348,9 +348,10 @@ causes:
 - The "Test Fixture"
 
 **(31:00)** Approaches to managing fixtures:
+
 1. Transient Fresh - Created and destroyed around every test.
-1. Persistent Fresh - Survives from test to test.  Allows state to accumulate from test to test.
-1. Persistent Shared - 
+2. Persistent Fresh - Survives from test to test.  Allows state to accumulate from test to test.
+3. Persistent Shared - 
 
 **Convention:** initialize fixtures in setup() methods
 
@@ -424,6 +425,7 @@ Ron Jeffries’ rules of simple design
 4. Minimize classes and methods
 
 Kent Beck says:
+
 1. Make it work
 2. Make it right
 3. Make it fast & small
