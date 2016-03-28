@@ -310,3 +310,126 @@ causes:
 - Position within the triangle depends on how mature your product is.  Early: common closure & common resuse principle.  Moves towards Release-Reuse principle.
 
 ### 46:10 - Conclusion
+
+## Episode 19 - Advanced TDD #1
+- 3:50 - Core Collapse Supernova
+
+### 12:50 - TDD Review, The 3 Laws
+- Before you write production code, you must first write a failing test.
+- Write minimal code to make the test fail.
+- Stop writing code as soon as the test passes.
+- "Refactoring is like washing your hands after going to the bathroom."
+
+### 32:10 - The single assert rule
+- Every unit test should have one and only one assert.
+- Arrange, act, assert
+- Don’t want the output of one test to be the input of another test.  aka: arrange, act, assert, act, assert, …
+
+## Episode 19 - Advanced TDD #2
+- 0:00 - overview
+- 1:10 - Incremental Algorithmics
+- 24:55 - Getting Stuck
+- 36:00 - Getting Unstuck
+
+### 49:20 - Conclusion
+- Tests cannot fully constrain a program.
+- Tests can only prove a program wrong, not right.
+
+
+## Episode 20 - Clean Tests
+- 5:50 - Overview
+- 8:30 - History of the Earth
+
+### 20:50 - Anatomy of a Test
+- Arrange, Act, Assert, Annihilate
+
+### 29:50 - The Arrange
+- Drives the system into a testable state
+- The "Test Fixture"
+
+**(31:00)** Approaches to managing fixtures:
+1. Transient Fresh - Created and destroyed around every test.
+1. Persistent Fresh - Survives from test to test.  Allows state to accumulate from test to test.
+1. Persistent Shared - 
+
+**Convention:** initialize fixtures in setup() methods
+
+### 40:55 - Setup Struggles
+
+### 52:55 - Test Hierarchy
+- Ruby Rspec
+- Contexts have their own before/after stuff
+- Replicating in other languages: nest test classes, and make them inherit from their parent containing class.
+
+### 1:06:00 - Clean composition
+- Group a series of actions together into a (utility) function so it looks like you are only calling one action.
+- The single assert principle means there should only be one logical assertion.  You can have multiple assert statements, just not a series of Act-Assert pairs.
+
+### 1:21:00 - Conclusion
+
+## Episode 21 - Test Design Study.
+
+### 3:20 - Test Location
+- Folder for tests vs. Test files alongside corresponding production files.
+### 8:10 - Test Files
+- 1 Test file per class*:
+	- Interfaces don’t have tests.
+	- Inner classes get their own file
+	- Classes created out of a refactoring don’t often get tests (assuming the source code already has tests)
+- Test Suites
+
+### 15:25 - SOLID tests.
+- Open Closed principle: Hide internal details from tests by passing in values needed to construct objects rather than constructing those objects within your tests.  This helps the rest of your code too.
+- "Tests are just another form of client"
+- Testing Private functions.  Find a way to test them through public functions.  If you have to test it, you can’t hide it in a private function
+
+### 31:30 - Test Location
+- "Some experienced TDD’ers will write out a list of tests they think they will need to pass."  Planning will be continuous.
+- Behavior driven development: Given - When - Then,  name tests for the action & assertion (when - then)
+- We want the tests to remind us what the requirements are.  The names should reflect the requirements, not the implementation.
+
+### 51:00 - Conclusion
+- Follow whatever pattern your IDE follows.
+- We don’t test classes, we test behaviors.
+
+## Episode 22 - The Process of Writing Tests.
+- 0:45 - Overview
+- 3:45 - The Great Galaxy Debate
+
+### 10:45 - Simple Techniques
+- "Fake it ‘till you make it" - The goal is incrementalism
+- "Stair Step Tests" - Tests whose sole purpose is to allow you to write the next test in sequence.  Once you write that test, the stair step test can be deleted.
+- "Assert First" - Start with the assert first.
+
+### 31:45 - Triangulation
+- Remember, as the tests get more specific, the code gets more generic.
+- Savings accounts > Money market account > extracted base class
+- "One to Many" : start with one object (singular situation) and work towards many (plural situation)
+
+### 53:10 - Refactoring Tests
+- The 2 disk problem - it’s better to loose your production code because you can recreate it from the test suite.  You can’t practically recreate the test suite from the production code.
+- "The best tests read like well written specifications."
+
+### 1:03:55 - Tests are specifications
+- "Write the tests you would want to read"
+- "Test the behavior, not the API."
+
+### 1:10:10 - Tests Come First
+
+Ron Jeffries’ rules of simple design
+
+1. "First, the code has to pass all it’s tests"
+2. "no duplication"
+3. the code should express all ideas the author wants to express
+4. Minimize classes and methods
+
+Kent Beck says:
+1. Make it work
+2. Make it right
+3. Make it fast & small
+
+- “In all things, the tests come first”
+- Optimize last.
+
+### 1:18:05 - Conclusion
+
