@@ -86,11 +86,13 @@ I can see how it can be slow to transition to TDD, but I don't need convincing o
 - Interfaces
 
 ### 46:45: Dependency Management
-- Single responsibility principle
-- Open close principle
-- Liskov Substitution
-- Interface Segregation
-- Dependency inversion
+- [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
+- [Open/Close Principle](https://en.wikipedia.org/wiki/Open/closed_principle)
+  - Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.
+- [Liskov Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)
+  -  if S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of that program.
+- [Interface Segregation Principle](https://en.wikipedia.org/wiki/Interface_segregation_principle)
+- [Dependency Inversion Principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)
 
 ### 48:45: Conclusion
 
